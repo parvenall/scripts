@@ -50,7 +50,7 @@ apt install -y \
     htop \
     iotop \
     tmux \
-    unrar \
+    unzip \
     mc \
     net-tools \
     plocate \
