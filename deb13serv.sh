@@ -30,7 +30,7 @@ echo "deb https://deb.debian.org/debian ${VERSION_CODENAME}-backports main" | te
 apt update -y
 
 echo "installing main packages bunch..."
-apt install -y \
+apt install -yq \
     ca-certificates \
     dirmngr \
     sudo \
@@ -65,10 +65,10 @@ apt install -y \
     git \
     firewalld
     
-#apt install -y firmware-linux-nonfree
+#apt install -yq firmware-linux-nonfree
 
 echo "installing docker engine & python..."
-apt install -y \
+apt install -yq \
     python3 \
     python3-pip \
     python3-venv \
