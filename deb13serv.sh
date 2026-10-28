@@ -78,6 +78,8 @@ apt install -yq \
     docker-buildx-plugin \
     docker-compose-plugin
 
+apt -y autoremove
+
 DEBIAN_FRONTEND=noninteractive dpkg-reconfigure --priority=low unattended-upgrades
 
 echo "updating db for plocate..."
