@@ -85,7 +85,7 @@ updatedb
 
 echo "setting up for Komodo Periphery..."
 curl -sSL --create-dirs -o ~/komodo/setup-periphery.py https://raw.githubusercontent.com/moghtech/komodo/main/scripts/setup-periphery.py
-echo "Komodo Periphery script now in ./komodo. Run: python3 ~/komodo/setup-periphery.py --core-address="https://<core-address>" --connect-as="$(hostname)" --onboarding-key="O-...""
+echo 'Komodo Periphery script now in ./komodo. Run: python3 ~/komodo/setup-periphery.py --core-address="https://<core-address>" --connect-as="$(hostname)" --onboarding-key="O-..."'
 
 echo "setting up user for nginxui..."
 if ! id "nginxui" &>/dev/null; then
@@ -103,6 +103,6 @@ fi
 
 git clone -q https://github.com/parvenall/ubuntu-docker-firewall-bootstrap.git  firewalld_cockpit_script
 chmod +x ~/firewalld_cockpit_script/docker-firewall-cockpit-bootstrap.sh
-echo "firewalld & cockpit script now in ~/firewalld_cockpit_script. Run: ~/firewalld_cockpit_script/docker-firewall-cockpit-bootstrap.sh --allow-ssh-from <YOUR_PUBLIC_IP>/32"
+echo 'firewalld & cockpit script now in ~/firewalld_cockpit_script. Run: ~/firewalld_cockpit_script/docker-firewall-cockpit-bootstrap.sh --allow-ssh-from <YOUR_PUBLIC_IP>/32'
 
 #reboot
