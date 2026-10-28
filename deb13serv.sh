@@ -6,7 +6,8 @@ apt update -y
 
 echo "enable https apt..."
 apt install ca-certificates dirmngr -yq
-if [ -f /etc/apt/sources.list ]; then
+if [ -f /etc/apt/sources.list ]; then    
+    sed -i '/cdrom:/d' /etc/apt/sources.list
     sed -i 's/http:/https:/g' /etc/apt/sources.list
 fi
 
@@ -34,6 +35,7 @@ apt install -y \
     dirmngr \
     sudo \
     nano \
+    acl \
     gnupg \
     lvm2 \
     iproute2 \
@@ -76,7 +78,7 @@ apt install -y \
     docker-buildx-plugin \
     docker-compose-plugin
 
-dpkg-reconfigure --priority=low unattended-upgrades
+DEBIAN_FRONTEND=noninteractive dpkg-reconfigure --priority=low unattended-upgrades
 
 echo "updating db for plocate..."
 updatedb
